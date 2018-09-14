@@ -1,0 +1,5 @@
+.vs
+ArchitectureAspNetCoreEFMySQL.Core/bin
+ArchitectureAspNetCoreEFMySQL.Core/obj
+ArchitectureAspNetCoreEFMySQL.Web/bin
+ArchitectureAspNetCoreEFMySQL.Web/obj

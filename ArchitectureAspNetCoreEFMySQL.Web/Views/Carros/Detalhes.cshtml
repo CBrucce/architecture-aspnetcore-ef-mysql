@@ -1,0 +1,48 @@
+﻿@model ArchitectureAspNetCoreEFMySQL.Core.Domain.Entities.Carro
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div>
+    <h4>Carro</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Marca)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Marca)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Modelo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Modelo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AnoModelo)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AnoModelo)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AnoFabricacao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AnoFabricacao)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Editar" asp-route-id="@Model.Id">Editar</a> |
+    <a asp-action="Index">Voltar para lista</a>
+</div>

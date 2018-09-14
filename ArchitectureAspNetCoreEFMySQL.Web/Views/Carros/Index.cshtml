@@ -1,0 +1,58 @@
+﻿@model IEnumerable<ArchitectureAspNetCoreEFMySQL.Core.Domain.Entities.Carro>
+
+@{
+    ViewData["Title"] = "Carros";
+}
+<h2>@ViewData["Title"]</h2>
+
+<p>
+    <a asp-action="Criar">Novo carro</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Marca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modelo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnoModelo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnoFabricacao)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Marca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Modelo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnoModelo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AnoFabricacao)
+            </td>
+            <td>
+                <a asp-action="Editar" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Detalhes" asp-route-id="@item.Id">Detalhes</a> |
+                <a asp-action="Excluir" asp-route-id="@item.Id">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
